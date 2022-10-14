@@ -15,6 +15,7 @@
 .auth-nav
 .nav-link-footer
 .visually-hidden
+.icon
 .hero 
 .hero-text 
 .hero-btn 
@@ -22,6 +23,7 @@
 .main-subdject 
 .main-text 
 .main-list
+.main-img
 .list-item
 .section
 .main-section
@@ -32,6 +34,8 @@
 .team-page-item
 .team-page-title 
 .team-page-text 
+.team-icon
+.team-icon-social
 .footer 
 .footer-text 
 .address 
@@ -68,6 +72,7 @@
   --footer-bg: #2f303a;
   --active-btn: #188ce8;
   --footer-nav: rgba(255, 255, 255, 0.6);
+  --social-icon: #AFB1B8;
 }
 
 /* global */
@@ -127,6 +132,9 @@ ul {
 
   margin: -1px;
 }
+.icon{
+fill: inherit;
+}
 
 /* header global */
 
@@ -156,7 +164,8 @@ ul {
 .item .nav-link {
   padding-top: 32px;
   padding-bottom: 32px;
-  display: block;
+  display: flex;
+  align-items: center;
 }
 .site-nav .item:not(:last-child) {
   margin-right: 50px;
@@ -169,14 +178,21 @@ ul {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
+.nav-icon{
+  margin-right: 10px;
+}
+
+
 .site-nav .link:hover,
 .site-nav .link:focus,
 .nav-link:focus,
 .nav-link:hover {
   color: var(--accent-text);
+  fill: var(--accent-text);
 }
 .nav-link {
   color: var(--second-text);
+  fill: var(--second-text);
 }
 .auth-nav {
   display: flex;
@@ -226,6 +242,14 @@ ul {
 
 .hero {
   padding: 200px 0;
+  max-width: 1600px;
+height: 600px;
+margin-right: auto;
+margin-left: auto;
+background-image:linear-gradient( to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
   background-color: var(--first-section-bg);
 }
 .hero-text {
@@ -287,6 +311,18 @@ ul {
 .main-list {
   width: calc((100%-90px) / 4);
 }
+.main-img{
+width: 270;
+height: 120px;
+background-color: var(--third-section-bg);
+border-radius: 4px;
+display: flex;
+  justify-content: center;
+  align-items: center;
+margin-bottom: 30px;
+}
+
+
 .conteiner .list-item {
   display: flex;
   gap: 30px;
@@ -332,6 +368,26 @@ ul {
   line-height: 1.9;
   text-align: center;
 }
+.team-icon{
+  display: flex;
+  padding: 16px 32px 0px;
+  justify-content: center;
+}
+.team-icon-social{
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+  fill:var(--social-icon);
+}
+.team-icon-social:focus,
+.team-icon-social:hover{
+  background-color: var(--accent-text);
+  fill: #ffffff;
+  border-radius: 50%;
+}
+
+
+
 
 /* portfolio */
 
